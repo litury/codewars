@@ -59,17 +59,15 @@ decodeMorse = function (morseCode) {
 // --------------------------------------------------------------------------------
 // https://www.codewars.com/kata/54e6533c92449cc251001667/train/javascript
 
-const uniqueInOrder = function (iterable) {
-	function uniqueInOrder(sequence) {
-		const result = [];
-		
-		for (let i = 0; i < sequence.length; i++) {
-			if (sequence[i] !== sequence[i + 1]) {
-				result.push(sequence[i]);
-			}
+function uniqueInOrder(sequence) {
+	const result = [];
+	
+	for (let i = 0; i < sequence.length; i++) {
+		if (sequence[i] !== sequence[i + 1]) {
+			result.push(sequence[i]);
 		}
-		return result;
 	}
+	return result;
 }
 
 // --------------------------------------------------------------------------------
@@ -95,7 +93,7 @@ function duplicateEncode(word) {
 }
 
 // --------------------------------------------------------------------------------
-// https://www.codewars.com/kata/55f9bca8ecaa9eac7100004a/train/javascript
+// https://www.codewars.com/kata/55f9bca8ecaa9eac7100004a/train/javascript +
 
 function past(h, m, s) {
 	let milliseconds = 0;
