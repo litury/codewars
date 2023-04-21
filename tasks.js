@@ -254,10 +254,30 @@ function scrambleFast(str1, str2) {
 	return true;
 }
 
+
 // --------------------------------------------------------------------------------
 // https://www.codewars.com/kata/55c04b4cc56a697bb0000048/train/javascript 5*
 
-console.log(isPerfectSquare(4))
-console.log(Math.sqrt(2))
+function scramble(str1, str2) {
+	let count = {}
+	
+	for (let char of str1) {
+		count[char] = count[char] + 1 || 1;
+	}
+	
+	for (let char of str2) {
+		if (!count[char] || count[char] === 0) {
+			return false
+		}
+		count[char]--
+	}
+	
+	return true;
+}
+
+
+
+console.log(scramble('rkqodlww', 'qod'))
+
 
 	
