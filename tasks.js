@@ -1,4 +1,4 @@
-// https://www.codewars.com/kata/54b724efac3d5402db00065e/train/javascript
+// https://www.codewars.com/kata/54b724efac3d5402db00065e/train/javascript +
 
 decodeMorse = function (morseCode) {
 	
@@ -57,7 +57,7 @@ decodeMorse = function (morseCode) {
 }
 
 // --------------------------------------------------------------------------------
-// https://www.codewars.com/kata/54e6533c92449cc251001667/train/javascript
+// https://www.codewars.com/kata/54e6533c92449cc251001667/train/javascript +
 
 function uniqueInOrder(sequence) {
 	const result = [];
@@ -71,7 +71,7 @@ function uniqueInOrder(sequence) {
 }
 
 // --------------------------------------------------------------------------------
-// https://www.codewars.com/kata/5526fc09a1bbd946250002dc/train/javascript
+// https://www.codewars.com/kata/5526fc09a1bbd946250002dc/train/javascript +
 
 function findOutlier(integers) {
 	const even = integers.filter(num => num % 2 === 0)
@@ -81,7 +81,7 @@ function findOutlier(integers) {
 }
 
 // --------------------------------------------------------------------------------
-// https://www.codewars.com/kata/54b42f9314d9229fd6000d9c/train/javascript
+// https://www.codewars.com/kata/54b42f9314d9229fd6000d9c/train/javascript +
 
 function duplicateEncode(word) {
 	word = word.toLowerCase();
@@ -98,9 +98,9 @@ function duplicateEncode(word) {
 function past(h, m, s) {
 	let milliseconds = 0;
 	
-	milliseconds += s * 1000; // Преобразуем секунды в миллисекунды и добавляем к общему времени
-	milliseconds += m * 60000; // Преобразуем минуты в миллисекунды и добавляем к общему времени
-	milliseconds += h * 3600000; // Преобразуем часы в миллисекунды и добавляем к общему времени
+	milliseconds += s * 1000;
+	milliseconds += m * 60000;
+	milliseconds += h * 3600000;
 	
 	return milliseconds;
 }
@@ -277,7 +277,33 @@ function scramble(str1, str2) {
 
 
 
-console.log(scramble('rkqodlww', 'qod'))
+
+// https://www.codewars.com/kata/5503013e34137eeeaa001648/train/javascript 6*
+
+
+function diamond(size) {
+	if (size < 1 || size % 2 === 0) {
+		return null;
+	}
+	
+	let result = '';
+	for (let i = 1; i <= size; i += 2) {
+		result += ' '.repeat((size - i) / 2) + '*'.repeat(i) + '\n';
+	}
+	for (let i = size - 2; i >= 1; i -= 2) {
+		result += ' '.repeat((size - i) / 2) + '*'.repeat(i) + '\n';
+	}
+	
+	return result;
+}
+
+
+
+
+console.log(diamond(5))
+
+
+
 
 
 	
